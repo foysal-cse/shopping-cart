@@ -1,3 +1,12 @@
+var removeItems = document.getElementsByClassName("remove-item");
+
+Array.from(removeItems).map((el,index) => {
+        el.addEventListener('click', ()=> {
+            var quantity = document.getElementById(`quantity-${index}`).value;
+            console.log(quantity);
+            el.parentElement.parentElement.parentElement.style.display = "none";
+    })
+})
 
 
 
